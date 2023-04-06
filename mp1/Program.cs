@@ -5,7 +5,7 @@ namespace mp1
     {
         static void Main(string[] args)
         {
-            string s = null;
+
         }
     }
 
