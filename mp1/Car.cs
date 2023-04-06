@@ -10,8 +10,11 @@ namespace mp1
     internal class Car
     {
         private static List<Car> carsExtent = new();
-        private int _carsCount;
-        public int CarsCount 
+        public static List<Car> CarsExtent
+        {
+            get => carsExtent.ToList();
+        }
+        public static int CarsCount 
         {
             get => carsExtent.Count;
         }
@@ -161,10 +164,10 @@ namespace mp1
         private List<string> _carEquipment;
         public List<string> CarEquipment 
         {
-            get=> _carEquipment;
+            get=> _carEquipment.ToList();
             set 
             {
-                if (value.Count == 0) 
+                if (value == null || value.Count == 0) 
                 {
                     throw new Exception("Car must have a least 1 equpemnet");
                 }
@@ -173,10 +176,49 @@ namespace mp1
         }
         //atrybut opcjonalny
         public string? Description { get; set; }
-
-        Car()
+        //przesłonięcie
+        public override string ToString()
         {
+            return $"VIN: {VIN}, " +
+                $"Manufactured year: {ManufacturedYear}," +
+                $" Mileage: {MileageInKM}," +
+                $" Power: {PowerInKW}," +
+                $" Engine type: {EngineType}," +
+                $" Model: {Model}," +
+                $" Manufacturer: {Manufacturer}," +
+                $" Car equipment: {String.Join(", ", CarEquipment)}," +
+                $" Description: {Description}"; 
+        }
+        //metoda klasowa
+        public static float GetAvarageCarAge ()
+        {
+            return (float)carsExtent.Average(car => car.Age);
+        }
+        //przeciążenie
+        public static float GetAvarageCarMileage()
+        {
+            return (float)carsExtent.Average(car => car.MileageInKM);
+        }
+        public static float GetAvarageCarMileage(bool inmiles)
+        {
+            if(!inmiles)
+                return GetAvarageCarMileage();
+            return (float)carsExtent.Average(car => (car.MileageInKM)* 0.621371192);
+        }
+        //konstruktor
+        public Car(string vin, DateTime manufacturedYear, int mileageInKM, int powerInKW, string engineType, string model, string manufacturer, List<string> carEquipment, string? description)
+        {
+            VIN = vin;
+            ManufacturedYear = manufacturedYear;
+            MileageInKM = mileageInKM;
+            PowerInKW = powerInKW;
+            EngineType = engineType;
+            Model = model;
+            Manufacturer = manufacturer;
+            CarEquipment = carEquipment;
+            Description = description;
             carsExtent.Add(this);
         }
+
     }
 }

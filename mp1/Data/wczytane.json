@@ -1,0 +1,65 @@
+[
+  {
+    "Insurance": {
+      "ExpirationDate": "2024-04-01T00:00:00",
+      "InsuranceId": "ABC123"
+    },
+    "VIN": "1HGCM82633A004352",
+    "ManufacturedYear": "2003-01-01T00:00:00",
+    "Age": 20,
+    "MileageInKM": 100000,
+    "PowerInKW": 147,
+    "PowerInHP": 197,
+    "EngineType": "petrol",
+    "Model": "Accord",
+    "Manufacturer": "Honda",
+    "CarEquipment": [
+      "AC",
+      "Bluetooth",
+      "Navigation"
+    ],
+    "Description": "A very reliable car"
+  },
+  {
+    "Insurance": {
+      "ExpirationDate": "2023-06-30T00:00:00",
+      "InsuranceId": "DEF456"
+    },
+    "VIN": "1G1YJ2D7XE5001062",
+    "ManufacturedYear": "2014-05-01T00:00:00",
+    "Age": 9,
+    "MileageInKM": 50000,
+    "PowerInKW": 335,
+    "PowerInHP": 449,
+    "EngineType": "petrol",
+    "Model": "Corvette",
+    "Manufacturer": "Chevrolet",
+    "CarEquipment": [
+      "Sunroof",
+      "Leather seats",
+      "Backup camera"
+    ],
+    "Description": "A sleek and sporty car"
+  },
+  {
+    "Insurance": {
+      "ExpirationDate": "2025-12-31T00:00:00",
+      "InsuranceId": "GHI789"
+    },
+    "VIN": "JTDKB20U883325536",
+    "ManufacturedYear": "2008-08-01T00:00:00",
+    "Age": 15,
+    "MileageInKM": 200000,
+    "PowerInKW": 73,
+    "PowerInHP": 97,
+    "EngineType": "hybrid",
+    "Model": "Prius",
+    "Manufacturer": "Toyota",
+    "CarEquipment": [
+      "Hybrid",
+      "Apple CarPlay",
+      "Lane departure warning"
+    ],
+    "Description": "A fuel-efficient car"
+  }
+]
